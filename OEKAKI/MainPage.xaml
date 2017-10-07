@@ -16,20 +16,15 @@
             <!-- タイトル -->
             <TextBlock x:Name="txtTitle" Text="お絵かきアプリのメニュー" Margin="10,0,0,0" Foreground="Red" FontWeight="Bold" VerticalAlignment="Center" FontSize="22"></TextBlock>
             <TextBlock x:Name="txtPenThick" Text="ペンの太さ" Margin="10,0,0,0" VerticalAlignment="Center"/>
-            <ComboBox x:Name="cmbPenThick" Margin="10,0,0,0" Width="120" SelectedIndex="1" >
-                <ComboBoxItem Content="細い"/>
-                <ComboBoxItem Content="普通"/>
-                <ComboBoxItem Content="太い"/>
-            </ComboBox>
+            <Slider x:Name="sliderPenSize" Width="200" Minimum="1" Maximum="10" Margin="10,0,0,0" ValueChanged="SliderPenSize_ValueChanged" Value="5"/>
             <TextBlock x:Name="txtPenColor" Text="ペンの色" Margin="10,0,0,0" VerticalAlignment="Center"/>
-            <ComboBox x:Name="cmbPenColor" Margin="10,0,0,0" Width="120" SelectedIndex="1" >
+            <ComboBox x:Name="cmbPenColor" Margin="10,0,0,0" Width="80" SelectedIndex="0" SelectionChanged="cmbPenColor_SelectionChanged" >
                 <ComboBoxItem Content="黒"/>
                 <ComboBoxItem Content="赤"/>
                 <ComboBoxItem Content="青"/>
             </ComboBox>
-
         </StackPanel>
-        
+
         <!-- インクキャンバス -->
         <ScrollViewer x:Name="ScrollViewInkCanvas" Grid.Row="1">
             <InkCanvas x:Name="inkCanvas" />
