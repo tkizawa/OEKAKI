@@ -12,9 +12,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel x:Name="StackPanelMenu" Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Right">
+        <StackPanel x:Name="StackPanelMenu" Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0">
             <!-- タイトル -->
-            <TextBlock x:Name="txtTitle" Text="お絵かきアプリ(ぐるぐるDial)" Margin="10,0,0,0" Foreground="Red" FontWeight="Bold" VerticalAlignment="Center" FontSize="22"            Style="{ThemeResource HeaderTextBlockStyle}"/>
+            <TextBlock x:Name="txtTitle" Text="お絵かきアプリ(ぐるぐるDial)" Margin="10,0,0,0" Foreground="Red" FontWeight="Bold" VerticalAlignment="Center" FontSize="22" Style="{ThemeResource HeaderTextBlockStyle}"/>
+            <Ellipse HorizontalAlignment="Left" Margin="10,10,10,10" Stroke="Black" VerticalAlignment="Top" Height="{Binding Value, ElementName=SliderPenSize}" Width="{Binding Value, ElementName=SliderPenSize}" Fill="Black"/>
             <TextBlock x:Name="txtPenThick" Text="ペンの太さ" Margin="10,0,0,0" VerticalAlignment="Center"/>
             <Slider x:Name="SliderPenSize" Width="200" Minimum="1" Maximum="10" Margin="10,0,0,0" ValueChanged="SliderPenSize_ValueChanged" Value="5"/>
             <TextBlock x:Name="txtPenColor" Text="ペンの色" Margin="10,0,0,0" VerticalAlignment="Center"/>
@@ -29,6 +30,5 @@
         <ScrollViewer x:Name="ScrollViewInkCanvas" Grid.Row="1">
             <InkCanvas x:Name="inkCanvas" />
         </ScrollViewer>
-
     </Grid>
 </Page>
