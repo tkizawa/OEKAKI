@@ -80,7 +80,7 @@ namespace OEKAKI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void cmbPenColor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void cboPenColor_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (inkAttr == null)
             {
@@ -88,7 +88,7 @@ namespace OEKAKI
             }
 
             // ペンの色
-            switch (cmbPenColor.SelectedIndex)
+            switch (cboPenColor.SelectedIndex)
             {
                 case 0:
                     inkAttr.Color = Windows.UI.Colors.Black;
@@ -163,13 +163,13 @@ namespace OEKAKI
             }
             else if (MenuText.Equals("お絵かきペンカラー") == true)
             {
-                var idx = cmbPenColor.SelectedIndex;
+                var idx = cboPenColor.SelectedIndex;
                 idx = idx + 1;
                 if (idx > 2)
                 {
                     idx = 0;
                 }
-                cmbPenColor.SelectedIndex = idx;
+                cboPenColor.SelectedIndex = idx;
             }
         }
 

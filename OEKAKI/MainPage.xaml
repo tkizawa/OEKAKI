@@ -21,7 +21,7 @@
             <TextBlock x:Name="txtPenThick" Text="ペンの太さ" Margin="10,0,0,0" VerticalAlignment="Center"/>
             <Slider x:Name="SliderPenSize" Width="200" Minimum="1" Maximum="10" Margin="10,0,0,0" ValueChanged="SliderPenSize_ValueChanged" Value="5"/>
             <TextBlock x:Name="txtPenColor" Text="ペンの色" Margin="10,0,0,0" VerticalAlignment="Center"/>
-            <ComboBox x:Name="cmbPenColor" Margin="10,0,0,0" Width="80" SelectedIndex="0" SelectionChanged="cmbPenColor_SelectionChanged" >
+            <ComboBox x:Name="cboPenColor" Margin="10,0,0,0" Width="80" SelectedIndex="0" SelectionChanged="cmbPenColor_SelectionChanged" >
                 <ComboBoxItem Content="黒"/>
                 <ComboBoxItem Content="赤"/>
                 <ComboBoxItem Content="青"/>
