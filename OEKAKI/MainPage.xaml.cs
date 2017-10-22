@@ -81,7 +81,7 @@ namespace OEKAKI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void cboPenColor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void cmbPenColor_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (inkAttr == null)
             {
@@ -89,7 +89,7 @@ namespace OEKAKI
             }
 
             // ペンの色
-            switch (cboPenColor.SelectedIndex)
+            switch (cmbPenColor.SelectedIndex)
             {
                 case 0:
                     inkAttr.Color = Windows.UI.Colors.Black;
@@ -162,19 +162,20 @@ namespace OEKAKI
             }
             else if (MenuText.Equals("お絵かきペンカラー") == true)
             {
-                var idx = cboPenColor.SelectedIndex;
+                var idx = cmbPenColor.SelectedIndex;
                 idx = idx + 1;
                 if (idx > 2)
                 {
                     idx = 0;
                 }
-                cboPenColor.SelectedIndex = idx;
+                cmbPenColor.SelectedIndex = idx;
             }
         }
 
         private void MyController_ButtonClicked(RadialController sender, RadialControllerButtonClickedEventArgs args)
         {
             MessageDialog msg = new MessageDialog("Surface Dialがプッシュされました", "お絵かき");
+            var a = msg.ShowAsync();
         }
 
     }

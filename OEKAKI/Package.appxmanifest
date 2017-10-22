@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="57742TomokazuKizawa.Dial" Publisher="CN=963B8572-7B10-48CC-9F90-46F0022D6A68" Version="1.1.15.0" />
+  <Identity Name="57742TomokazuKizawa.Dial" Publisher="CN=963B8572-7B10-48CC-9F90-46F0022D6A68" Version="1.1.19.0" />
   <mp:PhoneIdentity PhoneProductId="bdc2b48c-0c53-4f78-833e-4b8debd5a0cd" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>お絵かき(ぐるぐるDial)</DisplayName>
