@@ -8,6 +8,7 @@ using Windows.Foundation.Collections;
 using Windows.Storage.Streams;
 using Windows.UI.Input;
 using Windows.UI.Input.Inking;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -117,16 +118,14 @@ namespace OEKAKI
             // カスタムツールのアイコンを作成する
             RandomAccessStreamReference icon = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/StoreLogo.png"));
 
-            // メニューの作成
+            // メニューの作成と追加(ペンサイズ)
             RadialControllerMenuItem myItem =
                 RadialControllerMenuItem.CreateFromIcon("お絵かきペンサイズ", icon);
-            // メニューの追加
             myController.Menu.Items.Add(myItem);
 
-            // メニューの作成
+            // メニューの作成と追加(ペンカラー)
             RadialControllerMenuItem myItem1 =
                 RadialControllerMenuItem.CreateFromIcon("お絵かきペンカラー", icon);
-            // メニューの追加
             myController.Menu.Items.Add(myItem1);
 
             // 標準メニューの削除
@@ -175,7 +174,7 @@ namespace OEKAKI
 
         private void MyController_ButtonClicked(RadialController sender, RadialControllerButtonClickedEventArgs args)
         {
-//            ButtonToggle.IsOn = !ButtonToggle.IsOn;
+            MessageDialog msg = new MessageDialog("Surface Dialがプッシュされました", "お絵かき");
         }
 
     }
